@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bisdxpnaj678d"]
+
+[ext_resource type="PackedScene" uid="uid://b8y1ps702vci0" path="res://meshes/island.glb" id="1_prc7n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udhpk"]
+albedo_color = Color(0.195218, 0.29, 0.1363, 1)
+
+[node name="island" instance=ExtResource("1_prc7n")]
+
+[node name="Island" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_udhpk")
