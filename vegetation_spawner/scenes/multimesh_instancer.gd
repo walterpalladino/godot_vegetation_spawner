@@ -176,7 +176,9 @@ func generate_colliders():
 
 	# Create one static body
 	var collision_parent = StaticBody3D.new()
+	#$"..".add_child(collision_parent)
 	add_child(collision_parent)
+	#collision_parent.owner = $".."
 	collision_parent.owner = owner
 	collision_parent.set_as_top_level(true)
 
