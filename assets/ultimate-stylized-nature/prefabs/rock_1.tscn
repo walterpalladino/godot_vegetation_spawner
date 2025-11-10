@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdu8tyncb4hv"]
+
+[ext_resource type="PackedScene" uid="uid://cqk4iop8nx51s" path="res://assets/ultimate-stylized-nature/sources/FBX/Rock_1.fbx" id="1_undht"]
+[ext_resource type="Material" uid="uid://b1b1x3nk885w6" path="res://assets/ultimate-stylized-nature/materials/Rocks.tres" id="2_74uvi"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kybbd"]
+height = 1.0
+radius = 0.3
+
+[node name="Rock_1" instance=ExtResource("1_undht")]
+
+[node name="Rock_1" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_74uvi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.041413784, 0.46146858, 0.09466028)
+shape = SubResource("CylinderShape3D_kybbd")

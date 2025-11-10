@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://kbu1jrqanl6l"]
+
+[ext_resource type="Texture2D" uid="uid://bsml4h316f5gr" path="res://assets/ultimate-stylized-nature/sources/Textures/PalmTree_Leaves.png" id="1_o345x"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_o345x")

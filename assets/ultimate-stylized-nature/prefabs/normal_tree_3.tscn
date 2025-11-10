@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfy3lbri246ed"]
+
+[ext_resource type="PackedScene" uid="uid://ce4jhv3dl061j" path="res://assets/ultimate-stylized-nature/sources/FBX/NormalTree_3.fbx" id="1_1yjfe"]
+[ext_resource type="Material" uid="uid://6m008ppvjnyf" path="res://assets/ultimate-stylized-nature/materials/NormalTree_Bark.tres" id="2_tkkhd"]
+[ext_resource type="Material" uid="uid://h0pb2qfv4ydc" path="res://assets/ultimate-stylized-nature/materials/NormalTree_Leaves.tres" id="3_2ujrs"]
+
+[node name="NormalTree_3" instance=ExtResource("1_1yjfe")]
+
+[node name="NormalTree_3" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_tkkhd")
+surface_material_override/1 = ExtResource("3_2ujrs")

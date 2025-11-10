@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ddp57gt36omue"]
+
+[ext_resource type="Texture2D" uid="uid://bcuucleqf6pp7" path="res://assets/ultimate-stylized-nature/sources/Textures/BirchTree_Bark.png" id="1_nk5j1"]
+[ext_resource type="Texture2D" uid="uid://cup7ok125smkx" path="res://assets/ultimate-stylized-nature/sources/Textures/BirchTree_Bark_Normal.png" id="2_d3efm"]
+
+[resource]
+albedo_texture = ExtResource("1_nk5j1")
+normal_enabled = true
+normal_texture = ExtResource("2_d3efm")

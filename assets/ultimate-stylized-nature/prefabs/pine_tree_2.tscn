@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctkuq7aarnnfa"]
+
+[ext_resource type="PackedScene" uid="uid://dwemuorguw1ej" path="res://assets/ultimate-stylized-nature/sources/FBX/PineTree_2.fbx" id="1_e54hh"]
+[ext_resource type="Material" uid="uid://s52g1ttd6cu6" path="res://assets/ultimate-stylized-nature/materials/PineTree_Bark.tres" id="2_30rvv"]
+[ext_resource type="Material" uid="uid://c32cdagw6e3xk" path="res://assets/ultimate-stylized-nature/materials/PineTree_Leaves.tres" id="3_ymhb4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ay6jl"]
+radius = 0.1
+
+[node name="PineTree_2" instance=ExtResource("1_e54hh")]
+
+[node name="PineTree_2" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_30rvv")
+surface_material_override/1 = ExtResource("3_ymhb4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02366519, 1, 0)
+shape = SubResource("CylinderShape3D_ay6jl")

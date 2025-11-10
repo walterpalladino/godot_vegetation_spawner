@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwxnrffjd8is6"]
+
+[ext_resource type="Texture2D" uid="uid://ctoi1gwl7ph17" path="res://assets/ultimate-stylized-nature/sources/Textures/MapleTree_Leaves.png" id="1_56oig"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.7645111, 0.7645111, 0.76451105, 1)
+albedo_texture = ExtResource("1_56oig")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7ygqy5x1uqto"]
+
+[ext_resource type="PackedScene" uid="uid://b4ltrbht0nl11" path="res://assets/ultimate-stylized-nature/sources/FBX/Bush_Small_Flowers.fbx" id="1_2psy1"]
+[ext_resource type="Material" uid="uid://cjdcsbr6hbnly" path="res://assets/ultimate-stylized-nature/materials/Bush_Leaves.tres" id="2_d2o82"]
+[ext_resource type="Material" uid="uid://b5ju44c0dlhm8" path="res://assets/ultimate-stylized-nature/materials/Flowers.tres" id="3_rfisc"]
+
+[node name="Bush_Small_Flowers" instance=ExtResource("1_2psy1")]
+
+[node name="Bush_Small_Flowers" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_d2o82")
+surface_material_override/1 = ExtResource("3_rfisc")

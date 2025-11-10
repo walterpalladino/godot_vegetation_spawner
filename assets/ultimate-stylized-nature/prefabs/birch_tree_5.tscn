@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://72ssl4n6p35v"]
+
+[ext_resource type="PackedScene" uid="uid://dy2y4t0gmcfln" path="res://assets/ultimate-stylized-nature/sources/FBX/BirchTree_5.fbx" id="1_or70h"]
+[ext_resource type="Material" uid="uid://ddp57gt36omue" path="res://assets/ultimate-stylized-nature/materials/BirchTree_Bark.tres" id="2_qph2h"]
+[ext_resource type="Material" uid="uid://btvc3jg328l0r" path="res://assets/ultimate-stylized-nature/materials/BirchTree_Leaves.tres" id="3_km27u"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kqnrm"]
+height = 4.0
+radius = 0.12
+
+[node name="BirchTree_5" instance=ExtResource("1_or70h")]
+
+[node name="BirchTree_5" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_qph2h")
+surface_material_override/1 = ExtResource("3_km27u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("CylinderShape3D_kqnrm")

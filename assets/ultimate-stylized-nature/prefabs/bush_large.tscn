@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp6csavsh6ssr"]
+
+[ext_resource type="PackedScene" uid="uid://1nfugrjrwm37" path="res://assets/ultimate-stylized-nature/sources/FBX/Bush_Large.fbx" id="1_ge8pq"]
+[ext_resource type="Material" uid="uid://cjdcsbr6hbnly" path="res://assets/ultimate-stylized-nature/materials/Bush_Leaves.tres" id="2_s3f3a"]
+
+[node name="Bush_Large" instance=ExtResource("1_ge8pq")]
+
+[node name="Bush_Large" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_s3f3a")

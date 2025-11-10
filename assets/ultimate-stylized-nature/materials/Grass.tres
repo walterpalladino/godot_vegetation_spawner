@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdy1524nc884c"]
+
+[ext_resource type="Texture2D" uid="uid://edvrkabm3jjq" path="res://assets/ultimate-stylized-nature/sources/Textures/Grass.png" id="1_7ku0x"]
+
+[resource]
+albedo_texture = ExtResource("1_7ku0x")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0ummt0148irj"]
+
+[ext_resource type="PackedScene" uid="uid://c3bohdf86fllg" path="res://assets/ultimate-stylized-nature/sources/FBX/DeadTree_5.fbx" id="1_mtxun"]
+[ext_resource type="Material" uid="uid://cpv7qauhkr6ko" path="res://assets/ultimate-stylized-nature/materials/MapleTree_Bark.tres" id="2_78gwv"]
+
+[node name="DeadTree_5" instance=ExtResource("1_mtxun")]
+
+[node name="DeadTree_5" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_78gwv")

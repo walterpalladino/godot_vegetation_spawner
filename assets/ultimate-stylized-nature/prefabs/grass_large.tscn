@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bix8ddf40dcyw"]
+
+[ext_resource type="PackedScene" uid="uid://boupcy85m778s" path="res://assets/ultimate-stylized-nature/sources/FBX/Grass_Large.fbx" id="1_hop30"]
+[ext_resource type="Material" uid="uid://cdy1524nc884c" path="res://assets/ultimate-stylized-nature/materials/Grass.tres" id="2_tl75f"]
+
+[node name="Grass_Large" instance=ExtResource("1_hop30")]
+
+[node name="Grass_Large" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_tl75f")

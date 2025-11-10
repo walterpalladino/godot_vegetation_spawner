@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://btd5arju17w8h"]
+
+[ext_resource type="PackedScene" uid="uid://lp1l8y4ht7dd" path="res://assets/ultimate-stylized-nature/sources/FBX/Grass_Small.fbx" id="1_2bft6"]
+[ext_resource type="Material" uid="uid://cdy1524nc884c" path="res://assets/ultimate-stylized-nature/materials/Grass.tres" id="2_74vls"]
+
+[node name="Grass_Small" instance=ExtResource("1_2bft6")]
+
+[node name="Grass_Small" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_74vls")

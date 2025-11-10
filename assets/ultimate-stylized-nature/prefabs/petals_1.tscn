@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cag87kuon00yb"]
+
+[ext_resource type="PackedScene" uid="uid://coninfhpewct0" path="res://assets/ultimate-stylized-nature/sources/FBX/Petals_1.fbx" id="1_pyp25"]
+[ext_resource type="Material" uid="uid://b5ju44c0dlhm8" path="res://assets/ultimate-stylized-nature/materials/Flowers.tres" id="2_48wdc"]
+
+[node name="Petals_1" instance=ExtResource("1_pyp25")]
+
+[node name="Petals_1" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_48wdc")

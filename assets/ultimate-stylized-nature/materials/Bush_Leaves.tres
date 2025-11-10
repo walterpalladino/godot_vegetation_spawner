@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjdcsbr6hbnly"]
+
+[ext_resource type="Texture2D" uid="uid://bvw0gv46xn72a" path="res://assets/ultimate-stylized-nature/sources/Textures/Bush_Leaves.png" id="1_bipco"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.5861168, 0.57108676, 0.30700293, 1)
+albedo_texture = ExtResource("1_bipco")

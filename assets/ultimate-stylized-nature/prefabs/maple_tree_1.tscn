@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://v5py30px7yc7"]
+
+[ext_resource type="PackedScene" uid="uid://46vvn4et12te" path="res://assets/ultimate-stylized-nature/sources/FBX/MapleTree_1.fbx" id="1_8g1c0"]
+[ext_resource type="Material" uid="uid://cpv7qauhkr6ko" path="res://assets/ultimate-stylized-nature/materials/MapleTree_Bark.tres" id="2_mf3k4"]
+[ext_resource type="Material" uid="uid://bwxnrffjd8is6" path="res://assets/ultimate-stylized-nature/materials/MapleTree_Leaves.tres" id="3_37xu4"]
+
+[node name="MapleTree_1" instance=ExtResource("1_8g1c0")]
+
+[node name="MapleTree_1" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_mf3k4")
+surface_material_override/1 = ExtResource("3_37xu4")
