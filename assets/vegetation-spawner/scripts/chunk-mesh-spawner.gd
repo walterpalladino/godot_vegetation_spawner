@@ -26,6 +26,7 @@ enum MeshChunkSize {
 
 @export_range(0.0, 0.9) var mesh_scale_variation : float = 0.5
 
+@export var instance_offset : Vector3 = Vector3.ZERO
 
 @export_group("Geometry Grouping")
 
@@ -88,8 +89,8 @@ func update_geometry_instances():
 		
 	var terrain_local_aabb : AABB = mesh_instance.get_mesh().get_aabb()
 	terrain_aabb = terrain.global_transform * terrain_local_aabb
-	print(terrain_aabb)
-	print(terrain_aabb.size)
+	#print(terrain_aabb)
+	#print(terrain_aabb.size)
 	
 	
 	#	Generate Transforms
@@ -97,15 +98,15 @@ func update_geometry_instances():
 		Vector2(terrain_aabb.position.x, terrain_aabb.position.z) , 
 		Vector2(terrain_aabb.size.x, terrain_aabb.size.z) 
 		)
-	print("Generated : " + str(geometry_transforms.size()))
+	#print("Generated : " + str(geometry_transforms.size()))
 
 	#	Validate terrain size and region size values
 #	var chunk_size = Vector2(mesh_chunk_size, mesh_chunk_size)
 	var chunks : Vector2i = Vector2(terrain_aabb.size.x, terrain_aabb.size.z) / mesh_chunk_size
-	print(chunks)
+	#print(chunks)
 	#var chunk_size : Vector2 = Vector2(terrain_aabb.size.x, terrain_aabb.size.z) / mesh_chunks
 	var chunk_size : Vector2 = Vector2(terrain_aabb.size.x / chunks.x, terrain_aabb.size.z / chunks.y) 
-	print(chunk_size)
+	#print(chunk_size)
 	var chunk_start : Vector2
 
 
@@ -115,12 +116,12 @@ func update_geometry_instances():
 			chunk_start = Vector2( terrain_aabb.position.x, terrain_aabb.position.z) + chunk_size * Vector2(x, z)
 			
 			var chunk_name = "Chunk-%02d-%02d" % [x, z]
-			print(chunk_name)
-			print(chunk_start)
-			print(chunk_start + chunk_size)
+			#print(chunk_name)
+			#print(chunk_start)
+			#print(chunk_start + chunk_size)
 
 			var filtered_transforms : Array[Transform3D] = filter_transforms(chunk_start, chunk_size, geometry_transforms)
-			print("Filtered : " + str(filtered_transforms.size()))
+			#print("Filtered : " + str(filtered_transforms.size()))
 #			var geometry_transforms : Array[Transform3D] = generate_geometry_transforms(chunk_start, chunk_size)
 #			print("Generated : " + str(geometry_transforms.size()))
 			#var multiMeshInstance3D : MultiMeshInstance3D = instanstiate_geometry(chunk_name, geometry_transforms)
@@ -190,7 +191,7 @@ func generate_geometry_transforms(chunk_start : Vector2, chunk_size : Vector2) -
 	var geometry_transforms : Array[Transform3D]  = []
 	
 	var geometry_groups_qty : int = (chunk_size.x * chunk_size.y) / geometry_group_radius / geometry_group_radius * geometry_density
-	print("Groupds : " + str(geometry_groups_qty))
+	#print("Groupds : " + str(geometry_groups_qty))
 	
 	for i in geometry_groups_qty :
 
@@ -207,13 +208,14 @@ func generate_geometry_transforms(chunk_start : Vector2, chunk_size : Vector2) -
 			
 			if check_close_geometry(geometry_transforms, in_radius_position.x, in_radius_position.z, geometry_group_minumum_distance):
 				continue
-				
+							
 			var height = find_height_at(in_radius_position.x, in_radius_position.z)
 			
 			if height:
 				
 				# Set position for the instance
 				var instance_origin = Vector3(in_radius_position.x, height, in_radius_position.z)
+				instance_origin += instance_offset
 				
 				# Rotate the mesh
 				var instance_basis = Basis()
@@ -231,28 +233,24 @@ func generate_geometry_transforms(chunk_start : Vector2, chunk_size : Vector2) -
 	return geometry_transforms
 	
 
-#	TODO : Change for shape cast
 func find_height_at(x:float, z:float):
 	
 	#RayCast3D
 	var origin = Vector3(x, 1000, z)
-	var target = origin  + Vector3(0, -1000, 0)
+	var target = origin  + Vector3(0, -1100, 0)
 	
 	var space_state = get_world_3d().direct_space_state
 	
 	var query = PhysicsRayQueryParameters3D.create(origin, target, collision_layers)
 	var result = space_state.intersect_ray(query)
 
-	#print_debug(result["normal"].y)
-	
 	if result:
 		if (result["normal"].y < minimum_slope):
 			return null
 		else:
 			
-			#print_debug(result["position"])
 			var position_y : float = result["position"].y
-			#print(position_y)
+
 			if position_y >= minimum_height and position_y <= maximum_height:
 				return position_y
 			else:
@@ -260,7 +258,10 @@ func find_height_at(x:float, z:float):
 	else:
 		return null
 	
-	
+
+
+		
+			
 func check_close_geometry(geometry_transforms : Array[Transform3D], x : float, z : float, distance : float) -> bool:
 	
 	for t in geometry_transforms:

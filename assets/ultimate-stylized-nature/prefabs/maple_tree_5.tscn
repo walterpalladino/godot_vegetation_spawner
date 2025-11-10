@@ -1,11 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmrkc86v4cuqu"]
+[gd_scene load_steps=5 format=3 uid="uid://dmrkc86v4cuqu"]
 
 [ext_resource type="PackedScene" uid="uid://dtwtc16c5xpb5" path="res://assets/ultimate-stylized-nature/sources/FBX/MapleTree_5.fbx" id="1_enel8"]
 [ext_resource type="Material" uid="uid://cpv7qauhkr6ko" path="res://assets/ultimate-stylized-nature/materials/MapleTree_Bark.tres" id="2_xn7gh"]
 [ext_resource type="Material" uid="uid://bwxnrffjd8is6" path="res://assets/ultimate-stylized-nature/materials/MapleTree_Leaves.tres" id="3_53wio"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ve0mc"]
+height = 3.0
+radius = 0.2
 
 [node name="MapleTree_5" instance=ExtResource("1_enel8")]
 
 [node name="MapleTree_5" parent="." index="0"]
 surface_material_override/0 = ExtResource("2_xn7gh")
 surface_material_override/1 = ExtResource("3_53wio")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041414022, 1.5, 0)
+shape = SubResource("CylinderShape3D_ve0mc")

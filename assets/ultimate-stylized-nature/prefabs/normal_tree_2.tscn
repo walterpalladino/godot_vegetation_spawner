@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://sxrvhlvmvpic"]
+[gd_scene load_steps=5 format=3 uid="uid://sxrvhlvmvpic"]
 
 [ext_resource type="PackedScene" uid="uid://os2pd2fqm40g" path="res://assets/ultimate-stylized-nature/sources/FBX/NormalTree_2.fbx" id="1_2l2ki"]
 [ext_resource type="Material" uid="uid://6m008ppvjnyf" path="res://assets/ultimate-stylized-nature/materials/NormalTree_Bark.tres" id="2_bytml"]
 [ext_resource type="Material" uid="uid://h0pb2qfv4ydc" path="res://assets/ultimate-stylized-nature/materials/NormalTree_Leaves.tres" id="3_rh1vw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bknut"]
+radius = 0.15
 
 [node name="NormalTree_2" instance=ExtResource("1_2l2ki")]
 
@@ -10,3 +13,10 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 surface_material_override/0 = ExtResource("2_bytml")
 surface_material_override/1 = ExtResource("3_rh1vw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02958107, 1, -0.041413784)
+shape = SubResource("CylinderShape3D_bknut")
