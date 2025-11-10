@@ -182,7 +182,7 @@ func generate_geometry(chunk_start : Vector2, chunk_size : Vector2) -> Array[Tra
 		var y: float = 0.0;
 		var z: float = chunk_start.y + rng.randf() * chunk_size.y;
 		
-		var noise = NoiseUtils.generate_noise_at(x,z,noise_seed, noise_scale, terrain_size, noise_offset, soft_exp, lod_scale) 
+		var noise = NoiseUtils.generate_noise_at(x,z,noise_seed, noise_scale, noise_offset) 
 		#var noise = noise_map[int(x) + int(z) * terrain_size]
 		#print_debug(noise)
 
