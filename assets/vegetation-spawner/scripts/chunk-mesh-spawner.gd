@@ -4,13 +4,13 @@ extends Node3D
 class_name ChunkMeshSpawner3D
 
 
-enum MeshChunkSize {
-	MCS_64 = 64,
-	MCS_128 = 128,
-	MCS_256 = 256,
-	MCS_512 = 512,
-	MCS_1024 = 1024,
-	MCS_2048 = 2048,
+enum ChunkSize {
+	Size_32 = 32,
+	Size_64 = 64,
+	Size_128 = 128,
+	Size_256 = 256,
+	Size_512 = 512,
+	Size_1024 = 1024
 }
 
 
@@ -41,7 +41,7 @@ enum MeshChunkSize {
 
 var terrain_aabb : AABB
 
-@export var mesh_chunk_size : MeshChunkSize = MeshChunkSize.MCS_64
+@export var mesh_chunk_size : ChunkSize = ChunkSize.Size_64
 #@export_range(1, 128) var mesh_chunks : int = 1
 
 @export_flags_3d_physics var collision_layers : int = 1

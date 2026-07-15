@@ -7,4 +7,8 @@
 
 [node name="Bush_Large" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+lod_bias = 0.3
+visibility_range_begin_margin = 4.0
+visibility_range_end = 32.0
+visibility_range_end_margin = 4.0
 surface_material_override/0 = ExtResource("2_s3f3a")

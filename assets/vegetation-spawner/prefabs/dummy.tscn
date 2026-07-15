@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bub50g6djhdcg"]
+
+[ext_resource type="Material" uid="uid://c3xxs05iq03b" path="res://assets/shaders/textures/maple-impostor.tres" id="1_ljkc1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_5yvxn"]
+
+[node name="Dummy" type="Node3D" unique_id=1462269693]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1658888035]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.4, 0)
+mesh = SubResource("QuadMesh_5yvxn")
+surface_material_override/0 = ExtResource("1_ljkc1")

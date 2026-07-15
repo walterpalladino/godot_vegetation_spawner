@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cae4otbgbh02k"]
+
+[ext_resource type="PackedScene" uid="uid://xoqygrqsle0t" path="res://assets/vegetation-spawner/meshes/grass_patch_single.fbx" id="1_7bxo7"]
+[ext_resource type="Material" uid="uid://cmdb0edtahf7e" path="res://assets/vegetation-spawner/materials/grass-blades.tres" id="2_6nhfh"]
+
+[node name="grass_patch_single" instance=ExtResource("1_7bxo7")]
+
+[node name="Grass_Patch_Single" parent="." index="0"]
+lod_bias = 0.01
+visibility_range_begin_margin = 4.0
+visibility_range_end = 20.0
+visibility_range_end_margin = 4.0
+surface_material_override/0 = ExtResource("2_6nhfh")

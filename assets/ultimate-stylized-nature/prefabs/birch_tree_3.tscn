@@ -12,6 +12,10 @@ radius = 0.12
 
 [node name="BirchTree_3" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+lod_bias = 0.3
+visibility_range_begin_margin = 4.0
+visibility_range_end = 64.0
+visibility_range_end_margin = 4.0
 surface_material_override/0 = ExtResource("2_w1oxg")
 surface_material_override/1 = ExtResource("3_fxokk")
 

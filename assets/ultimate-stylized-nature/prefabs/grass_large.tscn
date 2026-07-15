@@ -7,4 +7,8 @@
 
 [node name="Grass_Large" parent="." index="0"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+cast_shadow = 0
+visibility_range_begin_margin = 4.0
+visibility_range_end = 16.0
+visibility_range_end_margin = 4.0
 surface_material_override/0 = ExtResource("2_tl75f")

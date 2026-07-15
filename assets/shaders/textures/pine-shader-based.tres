@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://da0yd871nq11p"]
+
+[ext_resource type="Shader" uid="uid://gg2vgf1lm7gf" path="res://assets/shaders/textures/billboard-y.gdshader" id="1_7tb6h"]
+[ext_resource type="Texture2D" uid="uid://vg44h2xoyalc" path="res://assets/shaders/textures/tree_c0003.png" id="2_7tb6h"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_7tb6h")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_7tb6h")
+shader_parameter/alpha_scissor_threshold = 0.0
+shader_parameter/roughness = 1.0
+shader_parameter/specular = 0.5
+shader_parameter/uv1_scale = Vector2(1, 1)
+shader_parameter/uv1_offset = Vector2(0, 0)
+shader_parameter/frames = Vector2i(8, 8)
